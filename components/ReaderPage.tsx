@@ -556,7 +556,7 @@ const ReaderPage: React.FC<ReaderPageProps> = ({ book, onBack, onUpdatePosition,
     return (
         <>
             <div className="flex flex-col md:flex-row h-screen">
-                <aside className="w-full md:w-1-4 lg:w-1-5 bg-slate-800 p-4 overflow-y-auto shrink-0 flex flex-col">
+                <aside className="w-full md:w-1/4 lg:w-1/5 bg-slate-800 p-4 overflow-y-auto shrink-0 flex flex-col">
                     <button onClick={onBack} className="flex items-center gap-2 text-cyan-400 hover:text-cyan-300 mb-4 transition-colors font-semibold">
                         <ArrowLeftIcon className="w-5 h-5" />
                         Back to Library
@@ -575,7 +575,7 @@ const ReaderPage: React.FC<ReaderPageProps> = ({ book, onBack, onUpdatePosition,
                                 <div className="absolute inset-0 rounded-full border-2 border-cyan-500/30 border-t-cyan-400 animate-spin pointer-events-none" aria-hidden="true"></div>
                             )}
                         </div>
-                        <h2 className="text-xl font-bold truncate text-slate-200 flex-1">{book.title}</h2>
+                        <h2 className="text-xl font-bold truncate text-slate-200 flex-1 min-w-0">{book.title}</h2>
                         <button 
                             onClick={() => setIsSettingsModalOpen(true)}
                             className="p-2 text-slate-400 hover:text-cyan-400 transition-colors"
@@ -600,7 +600,7 @@ const ReaderPage: React.FC<ReaderPageProps> = ({ book, onBack, onUpdatePosition,
                         </select>
                     </div>
                 </aside>
-                <main className="flex-grow flex flex-col bg-slate-900 overflow-hidden relative">
+                <main className="flex-grow flex flex-col bg-slate-900 overflow-hidden relative min-w-0">
                     {audioError && (
                         <div className="absolute top-0 left-0 right-0 z-10 bg-red-800/90 backdrop-blur-sm text-white p-3 flex items-center justify-between shadow-lg">
                             <p className="text-sm font-medium">{audioError}</p>
