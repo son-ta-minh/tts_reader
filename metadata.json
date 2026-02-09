@@ -1,0 +1,5 @@
+{
+  "name": "Ebook Reader with TTS",
+  "description": "An application to import, manage, and listen to your e-books (.txt, .epub) using high-quality text-to-speech. Organize your library, read chapters, and enjoy a hands-free reading experience.",
+  "requestFramePermissions": []
+}
